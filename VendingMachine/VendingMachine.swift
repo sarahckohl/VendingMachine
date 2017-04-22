@@ -95,9 +95,9 @@ class InventoryUnarchiver {
 
 
 enum VendingMachineError: Error {
+    case insufficientFunds(required: Double)
     case invalidSelection
     case outOfStock
-    case insufficientFunds(required: Double)
 }
 
 class FoodVendingMachine: VendingMachine {
@@ -134,6 +134,7 @@ class FoodVendingMachine: VendingMachine {
     }
     
     func deposit(_ amount: Double){
+        amountDeposited += amount
     }
     
     func item(forSelection selection: VendingSelection) -> VendingItem? {
