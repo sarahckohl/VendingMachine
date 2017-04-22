@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -28,7 +28,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$50.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voq-ob-7Sb">
-                                                <rect key="frame" x="239.5" y="35" width="119.5" height="43"/>
+                                                <rect key="frame" x="239" y="35" width="120" height="43"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -52,13 +52,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1.25" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ead-0M-pYt">
-                                                <rect key="frame" x="89" y="25.5" width="50.5" height="24"/>
+                                                <rect key="frame" x="89" y="26" width="51" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcR-dM-thO">
-                                                <rect key="frame" x="117.5" y="50.5" width="22" height="24"/>
+                                                <rect key="frame" x="118" y="51" width="22" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -85,12 +85,12 @@
                                         <rect key="frame" x="0.0" y="112" width="375" height="65"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7V-QF-aHd">
-                                                <rect key="frame" x="8" y="17.5" width="74" height="30"/>
+                                                <rect key="frame" x="8" y="18" width="74" height="30"/>
                                                 <color key="tintColor" red="0.0078431372550000003" green="0.75294117650000003" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Add Funds"/>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$80.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwe-cn-0a2">
-                                                <rect key="frame" x="297" y="20.5" width="70" height="24"/>
+                                                <rect key="frame" x="297" y="21" width="70" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="70" id="Gov-dY-6Lu"/>
                                                 </constraints>
@@ -99,7 +99,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wkp-hH-W06">
-                                                <rect key="frame" x="237.5" y="26" width="51.5" height="17"/>
+                                                <rect key="frame" x="237" y="26" width="52" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -160,7 +160,7 @@
                                         <rect key="frame" x="0.0" y="526" width="375" height="65"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVe-7d-0dP">
-                                                <rect key="frame" x="8" y="22.5" width="65" height="20.5"/>
+                                                <rect key="frame" x="8" y="22" width="65" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -168,6 +168,9 @@
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="75s-Uj-ZkW">
                                                 <rect key="frame" x="273" y="18" width="94" height="29"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <action selector="updateQuantity:" destination="BYZ-38-t0r" eventType="valueChanged" id="7tC-wp-KUg"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                         <color key="backgroundColor" red="0.11764705882352941" green="0.14117647058823529" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -187,6 +190,9 @@
                                         </constraints>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Purchase"/>
+                                        <connections>
+                                            <action selector="purchase" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Db-FE-7vW"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -214,6 +220,7 @@
                         <outlet property="collectionView" destination="5AE-ym-lIo" id="uAz-ab-OqY"/>
                         <outlet property="priceLabel" destination="ead-0M-pYt" id="RTr-uD-kAc"/>
                         <outlet property="quantityLabel" destination="gcR-dM-thO" id="dcC-2b-chE"/>
+                        <outlet property="quantityStepper" destination="75s-Uj-ZkW" id="Q53-jp-rEl"/>
                         <outlet property="totalLabel" destination="voq-ob-7Sb" id="oHb-vP-v4a"/>
                     </connections>
                 </viewController>
