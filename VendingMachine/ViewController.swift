@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  VendingMachine
 //
-//  Created by Pasan Premaratne on 12/1/16.
-//  Copyright © 2016 Treehouse Island, Inc. All rights reserved.
+//  Created by yuzu on 2017/04/21.
+//  Copyright © 2017 Treehouse Island, Inc. All rights reserved.
 //
 
 import UIKit
@@ -23,12 +23,16 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     let vendingMachine: VendingMachine
     var currentSelection: VendingSelection?
+    var usdFormatter: NumberFormatter
+    
     
     required init?(coder aDecoder: NSCoder) {
         do {
             let dictionary = try PlistConverter.dictionary(fromFile: "VendingInventory", ofType: "plist")
             let inventory = try InventoryUnarchiver.vendingInventory(fromDictionary: dictionary)
             self.vendingMachine = FoodVendingMachine(inventory: inventory)
+            usdFormatter = NumberFormatter()
+            usdFormatter.numberStyle = .currency
         } catch let error {
             fatalError("\(error)")
         }
@@ -74,7 +78,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 try vendingMachine.vend(selection: currentSelection, quantity: Int(quantityStepper.value))
                 updateDisplayWith(balance: vendingMachine.amountDeposited, totalPrice: 0.0, itemPrice: 0, itemQuantity: 1)
             } catch VendingMachineError.insufficientFunds(let required){
-                showAlertWith(title: "Insufficient Funds", message: "Please insert $\(required) to complete this purchase")
+                
+                let formattedAmount = usdFormatter.string(from: required as NSNumber) ?? "more funds"
+                
+                showAlertWith(title: "Insufficient Funds", message: "Please insert \(formattedAmount) to complete this purchase")
+
             } catch VendingMachineError.invalidSelection {
                 showAlertWith(title: "Invalid Selection", message: "Please select a different item")
             } catch VendingMachineError.outOfStock{
@@ -90,24 +98,25 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             
         } else {
             // FIXME: Alert user to no selection
+            showAlertWith(title: "Invalid Selection", message: "Please select an item to continue")
         }
-    
+            self.currentSelection = nil
     }
 
     func updateDisplayWith(balance: Double? = nil, totalPrice: Double? = nil, itemPrice: Double? = nil, itemQuantity: Int? = nil) {
         
-        if let balanceValue = balance {
-            balanceLabel.text = "$\(balanceValue)"
+        if case let balanceValue as NSNumber = balance {
+            balanceLabel.text = usdFormatter.string(from: balanceValue)
 
         }
 
-        if let totalValue = totalPrice {
-            totalLabel.text = "$\(totalValue)"
+        if case let totalValue as NSNumber = totalPrice {
+            totalLabel.text = usdFormatter.string(from: totalValue)
         }
         
         
-        if let priceValue = itemPrice {
-            priceLabel.text = "$\(priceValue)"
+        if case let priceValue as NSNumber = itemPrice {
+            priceLabel.text = usdFormatter.string(from: priceValue)
         }
         
         if let quantityValue = itemQuantity {
@@ -142,7 +151,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func dismissAlert(sender: UIAlertAction) -> Void {
-        updateDisplayWith(balance: 0, totalPrice: 0, itemPrice: 0, itemQuantity: 1)
+        updateDisplayWith(balance: vendingMachine.amountDeposited, totalPrice: 0, itemPrice: 0, itemQuantity: 1)
     }
     
     @IBAction func depositFunds() {
